@@ -19,6 +19,10 @@ import { TbHealthRecognition } from "react-icons/tb";
 import { MdOutlineMessage } from "react-icons/md";
 import { GiHealthNormal } from "react-icons/gi";
 import { GoHistory } from "react-icons/go";
+import { FaUserDoctor } from "react-icons/fa6";
+import { RiNurseLine } from "react-icons/ri";
+import { MdOutlineLocalPharmacy } from "react-icons/md";
+import { BsMotherboard } from "react-icons/bs";
 
 
 export const doctors = [
@@ -80,50 +84,42 @@ export const dashboard_items = [
     name: "Dashboard",
     icon:<SlHome size={20}/>,
     back:<GoChevronRight size={20}/>,
-    genre:'admin'
+    genre:'admin',
+    path:'/'
   },
   {
     id: 2,
     name: "Employees",
     icon:<MdOutlineLocalHospital size={20}/>,
     back:<GoChevronRight size={20}/>,
-    genre:'admin'
+    genre:'admin',
+    path:'/employees'
   },
   {
     id: 3,
     name: "patients",
     icon:<FaPerson  size={20}/>,
     back:<GoChevronRight size={20}/>,
-    genre:'admin'
+    genre:'admin',
+    path:'/patients'
   },
   {
     id: 4,
-    name: "Appointment",
+    name: "Appointments",
     icon:<FaMobileAlt  size={20}/>,
     back:<GoChevronRight size={20}/>,
-    genre:'admin'
-  },
-  {
-    id: 5,
-    name: "Account",
-    icon:<IoSettingsOutline size={20}/>,
-    back:<GoChevronRight size={20}/>,
-    genre:'admin'
+    genre:'admin',
+    path:'/appointments'
   },
   {
     id: 6,
     name: "Charges",
     icon:<RiMoneyRupeeCircleLine size={20}/>,
     back:<GoChevronRight size={20}/>,
-    genre:'admin'
+    genre:'admin',
+    path:'/charges'
   },
-  {
-    id: 7,
-    name: "Medicine",
-    icon:<AiOutlineMedicineBox size={20}/>,
-    back:<GoChevronRight size={20}/>,
-    genre:'admin'
-  },
+  
   {
     id: 8,
     name: "Dashboard",
@@ -190,3 +186,50 @@ export const patient_page_items = [
    path:'/dashboard/patient/history', 
   }
 ] 
+
+
+
+export const admin_employees_items = [{
+    id:1,
+    name:"Doctors",
+    icon:<FaUserDoctor size={20} color='white'/>
+},
+{
+    id:2,
+    name:"Nurses",
+    icon:<RiNurseLine size={20} color='white'/>
+},{
+
+        id:3,
+    name:"Pharmacists",
+    icon:<MdOutlineLocalPharmacy size={20} color='white'/>
+},
+{
+    id:4,
+    name:"Others",
+    icon:<BsMotherboard size={20} color='white'/>
+}]
+
+
+export const doctor_departments = [
+    "General Medicine",
+    "Cardiology",
+    "Neurology",
+    "Orthopedics",
+    "Pediatrics",
+    "Dermatology",
+    "Gynecology",
+    "Ophthalmology",
+    "ENT",
+    "Psychiatry",
+  ];
+
+
+
+export const other_departments = [
+    "Receptionist",
+    "Security Guard",
+    "Lab Assistant",
+    "IT Support Staff",
+    "Ambulance Driver",
+];

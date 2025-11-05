@@ -10,9 +10,8 @@ export const metadata: Metadata = {
   description: "Welcome to Dashboard",
 };
 
-const page = () => {
- 
 
+const page = () => {
 return (
 <>
 <section className='min-h-screen w-full text-gray-700 flex p-2 flex-col gap-5'>

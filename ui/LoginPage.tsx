@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import GoogleLogin from "./GoogleLogin";
 import { useSearchParams } from "next/navigation";
-
+import { AxiosError } from "axios";
 
 const LoginPage = () => {
   const searchParams = useSearchParams()
@@ -37,9 +37,10 @@ const LoginPage = () => {
         window.location.reload()
         } 
         }
-      catch (err:any) {
-        setUserMsg(err?.response?.data?.message)
-      }
+      catch (err) {
+  const error = err as AxiosError<{ message: string }>;
+  setUserMsg(error.response?.data?.message || "Something went wrong");
+}
     } else if(!isLogin && patientPortal) {
       if(!formData.email || !formData.password || !formData.name) return;
       try {
@@ -48,8 +49,9 @@ const LoginPage = () => {
         setUserMsg(serverResponse?.data?.message)
         setIsLogin(true)
         }
-      } catch (err:any) {
-        setUserMsg(err?.response?.data?.message)
+      }   catch (err) {
+        const error = err as AxiosError<{ message: string }>;
+        setUserMsg(error.response?.data?.message || "Something went wrong");
       }
     }
     else{
@@ -61,9 +63,10 @@ const LoginPage = () => {
           window.location.reload()
         }
       }
-      catch(err: any){
-        setUserMsg(err?.response?.data?.message)
-      }
+      catch (err) {
+  const error = err as AxiosError<{ message: string }>;
+  setUserMsg(error.response?.data?.message || "Something went wrong");
+}
     }
   };
 

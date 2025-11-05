@@ -13,10 +13,11 @@ return (
 {sidebarOpen ? dashboard_items.map((item, index) => {
       if (item.genre && item.genre !== role) return null;
       return (
-        <Link href={pathname.startsWith('/dashboard/patient') && item.path ? `/dashboard/patient${item.path}`:''} key={index}
+        <Link href={pathname.startsWith('/dashboard/patient') && item.path ? `/dashboard/patient${item.path}`:
+         pathname.startsWith('/dashboard/admin') && item.path ? `/dashboard/admin${item.path}`: ''} key={index}
           onClick={item.id === 13 ? () => setSidebarOpen(!sidebarOpen) : undefined}
           className={`${item.id === 13 ? 'bg-blue-900 text-white' : pathname.startsWith(`/dashboard/patient${item.path}`) && item.id !=8 ? 'bg-blue-900 text-white'
-          : pathname.startsWith(`/dashboard/admin${item.path}`) ? 'bg-blue-900 text-white' : 'text-gray-700'} 
+          : pathname.startsWith(`/dashboard/admin${item.path}`) && item.id !=1 ? 'bg-blue-900 text-white' : 'text-gray-700'} 
           cursor-pointer w-full h-auto p-4 flex items-center text-sm justify-start gap-2 hover:bg-blue-900 hover:text-white duration-600`}>
           <p>{item.icon}</p>
           <p>{item.name}</p>
